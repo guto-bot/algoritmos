@@ -6,26 +6,26 @@ function names(array $list, string $name)
     $up = count($list) - 1;
 
     while ($down <= $up) {
-        $found_name = intdiv($down + $up, 2);
-        $kick = $list[$found_name];
+        $mid = intdiv($down + $up, 2);
+        $kick = $list[$mid];
 
         if ($kick == $name) {
-            return $found_name;
+            return $mid;
         }
 
         if ($kick > $name) {
-            $up = $found_name - 1;
+            $up = $mid - 1;
             continue;
         }
 
-        $down = $found_name + 1;
+        $down = $mid + 1;
     }
 
     return 'NULL' . PHP_EOL;
 }
 
-$list_names = ['Cesar', 'Geovanna', 'Igor', 'Jackson', 'Maísa', 'João', 'Ravih'];
+$list_names = ['Cesar', 'Geovanna', 'Igor', 'Jackson', 'João', 'Maísa', 'Ravih'];
 
-$result = names($list_names, 'Jackson');
+$result = names($list_names, 'Geovanna');
 
 echo $result . PHP_EOL;
