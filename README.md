@@ -48,3 +48,22 @@ $result = names($list_names, 'Cesar');
 
 echo $result . PHP_EOL;
 ```
+
+<h2>Notação Big O</h2>
+
+<p>
+Uma notação que diz o quão rápido é um algoritmo. É sempre bom entender o quão rápido ou lento foi um determinado algoritmo.
+
+Basicamente uma lista com 1 bilhão de elementos precisa ser percorrida, com uma pequisa simples ele demoraria 1000000000ms de execução,
+com a pesquisa binária ele levaria 30ms, poderoso demais!!, lembrando a pesquisa binária é logaritmica.
+<p>
+
+```php
+# 1 bilhão de elementos
+
+$elements = (int) 1000000000;
+
+$result = (int) ceil(log($elements, 2));
+
+echo $result . PHP_EOL;
+```
